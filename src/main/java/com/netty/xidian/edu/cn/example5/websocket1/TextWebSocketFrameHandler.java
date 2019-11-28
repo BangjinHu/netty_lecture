@@ -1,4 +1,4 @@
-package com.netty.xidian.edu.cn.example5;
+package com.netty.xidian.edu.cn.example5.websocket1;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;

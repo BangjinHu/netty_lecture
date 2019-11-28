@@ -1,4 +1,4 @@
-package com.netty.xidian.edu.cn.udp;
+package com.netty.xidian.edu.cn.example7.udp3;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

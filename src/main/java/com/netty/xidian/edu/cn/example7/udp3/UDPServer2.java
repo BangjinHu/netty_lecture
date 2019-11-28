@@ -1,4 +1,4 @@
-package com.netty.xidian.edu.cn.udp;
+package com.netty.xidian.edu.cn.example7.udp3;
 
 import java.io.IOException;
 import java.net.DatagramSocket;
@@ -7,8 +7,7 @@ import java.net.SocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.DatagramChannel;
 
-public class UDPServer1 {
-
+public class UDPServer2 {
     public final static int port = 1599;
     public final static int max_packet_size = 65502;
 
@@ -23,15 +22,12 @@ public class UDPServer1 {
             while (true){
                 SocketAddress client = channel.receive(buffer);
                 buffer.flip();
-                System.out.println(client + "say: ");
-                while (buffer.hasRemaining()){
-                    System.out.println(buffer.get());
-                }
-                System.out.println();
+                channel.send(buffer, client);
                 buffer.clear();
             }
         }catch (IOException e){
             e.printStackTrace();
         }
     }
+
 }
